@@ -4,6 +4,14 @@ A proxy view is a Backbone View that doesn't render any of its own HTML - it mee
 
 ## Example
 
+Given you already had this HTML on a page:
+
+```html
+<div id="buttons">
+  <a href="#" id="next-button">Next</a>
+</div>
+```
+
 You can specify required html like this:
 
 ```coffeescript
