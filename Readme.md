@@ -40,3 +40,16 @@ The proxy view will also blow up if the element passed in does not exist. Like s
 // This will blow up.
 new Backbone.ProxyViewTest({ el: $('#this-doesnt-exist') });
 ```
+
+## Contributing
+
+We encourage all community contributions. Keeping this in mind, please follow these general guidelines when contributing:
+
+* Fork the project
+* Create a topic branch for what you’re working on (git checkout -b awesome_feature)
+* Commit away, push that up (git push your\_remote awesome\_feature)
+* Create a new GitHub Issue with the commit, asking for review. Alternatively, send a pull request with details of what you added.
+
+## License
+
+backbone.proxy-view is released under the MIT License (see the [license file](https://github.com/envato/backbone.proxy-view/blob/master/LICENCE)) and is copyright Envato & Keith Pitt, 2013.
