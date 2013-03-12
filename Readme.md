@@ -8,11 +8,31 @@ Given you already had this HTML on a page:
 
 ```html
 <div id="buttons">
-  <a href="#" id="next-button">Next</a>
+  <a href="#" class="next-button">Next</a>
 </div>
 ```
 
-You can specify required html like this:
+And you wanted something to happen with the "Next", you could create a Proxy View
+that looks like this:
+
+```coffeescript
+class TestProxyView extends Backbone.ProxyView
+  events:
+    "click .next-button": "next"
+
+  next: ->
+    alert "Oh hai!"
+
+new ButtonProxyView el: "#buttons"
+```
+
+The benefit of this approch, is it gives you a nice structure to the random bits of jQuery you
+scatter throught your application.
+
+### Defining HTML requirements
+
+If your Proxy View _requires_ an element on the page, you can define it as a
+requirement like so:
 
 ```coffeescript
 class TestProxyView extends Backbone.ProxyView
@@ -34,7 +54,10 @@ class TestProxyView extends Backbone.ProxyView
 And then reference that in your code like so:
 
 ```coffeescript
-@$requirement('form') # Nice and DRY!!
+class TestProxyView extends Backbone.ProxyView
+  # ...
+  next: ->
+    @$requirement('something').addClass 'nexted' # Nice and DRY!!
 ```
 
 When the proxy view is created - it'll check to see if those selectors exist.
