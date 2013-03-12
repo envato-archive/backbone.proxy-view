@@ -1,7 +1,8 @@
 # Backbone.ProxyView
 
-A proxy view is a Backbone View that doesn't render any of its own HTML -
-it meerly adds behaviour to existing elements on the page.
+A proxy view is a Backbone View that doesn't render any of its own HTML - it meerly adds behaviour to existing elements on the page.
+
+## Example
 
 You can specify required html like this:
 
